@@ -1,21 +1,21 @@
-export default {
+const theme = {
   palette: {
     // 'light' or 'dark' for light/dark mode
     type: 'light',
 
     // Primary color. Only 'main' is mandatory, the rest is optional
     primary: {
-      light: '#7986cb',
-      main: '#3f51b5',
-      dark: '#303f9f',
+      light: '#42a5f5',
+      main: '#1976d2',
+      dark: '#1565c0',
       contrastText: '#fff'
     },
 
     // Secondary color. Only 'main' is mandatory, the rest is optional
     secondary: {
-      light: '#ff4081',
-      main: '#eb004d',
-      dark: '#c51162',
+      light: '#ba68c8',
+      main: '#9c27b0',
+      dark: '#7b1fa2',
       contrastText: '#fff'
     },
 
@@ -28,3 +28,5 @@ export default {
     }
   },
 };
+
+export default theme;
