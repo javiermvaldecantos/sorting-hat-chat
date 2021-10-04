@@ -14,7 +14,7 @@ const App = () => {
     <ThemeProvider theme={createTheme(theme)}>
       <CssBaseline />
 
-      <Box className={styles['wrapper']}>
+      <Box sx={styles['app']}>
         <AppHeader />
         <AppBody />
       </Box>

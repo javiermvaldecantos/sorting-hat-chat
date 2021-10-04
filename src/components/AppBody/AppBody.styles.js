@@ -1,21 +1,19 @@
-export default {
-  'wrapper': {
-    flexGrow: 1,
-    minWidth: 0
+const styles = {
+  'app-body': {
+    height: '100%',
+    paddingTop: (theme) => ({
+      xs: '56px',
+      sm: '64px !important'
+    }),
+
+    '@media (min-width: 0px) and (orientation: landscape)': {
+      paddingTop: '48px'
+    },
   },
 
-  'header-spacing': {
-    visibility: 'hidden',
-  },
-
-  'content': {
-    padding: (theme) => ({
-      xs: theme.spacing(2),
-      md: theme.spacing(4),
-    }),
-    paddingBottom: (theme) => ({
-      xs: theme.spacing(4),
-      md: theme.spacing(8),
-    }),
+  'app-body--content': {
+    height: '100%',
   }
 }
+
+export default styles;
