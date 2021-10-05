@@ -14,7 +14,7 @@ const styles = {
   },
 
   'interactive-chat--controls-wrapper': {
-    flex: '200px',
+    flex: '0',
   }
 }
 

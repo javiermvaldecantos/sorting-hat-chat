@@ -64,7 +64,7 @@ const InteractiveChat = () => {
   const startQuiz = () => {
     const newMessagesToParticipant = [];
 
-    const greeting = { text: 'Alright ' + participantName + '! Let\'s start' };
+    const greeting = { text: 'All right ' + participantName + '! Let\'s start' };
     newMessagesToParticipant.push(greeting);
 
     for (let i = 0; i < questions.length; i++) {
@@ -107,7 +107,7 @@ const InteractiveChat = () => {
     const houseNames = { g: 'Gryffindor', r: 'Ravenclaw', h: 'Hufflepuff', s: 'Slytherin' }
 
     const finishingMessages = [
-      { text: 'Alright ' + participantName + ', that\'s it! Let me check your answers' },
+      { text: 'All right ' + participantName + ', that\'s it! Let me check your answers' },
       { text: '...' },
       { text: 'Well...' },
       { text: 'According to your answers you belong to...' },
@@ -136,6 +136,16 @@ const InteractiveChat = () => {
 
       setParticipantScore(newScore);
       setCurrentQuestionIndex(currentQuestionIndex + 1);
+    }
+  }
+
+  const getCurrentOptionsCount = () => {
+    const currentQuestion = questions[currentQuestionIndex];
+
+    if (currentQuestion) {
+      return currentQuestion.answers.length;
+    } else {
+      return 0;
     }
   }
 
@@ -186,7 +196,12 @@ const InteractiveChat = () => {
         className="interactive-chat--controls-wrapper"
         sx={styles['interactive-chat--controls-wrapper']}
       >
-        <InteractiveChatControls onQuestionAnswered={onQuestionAnswered} />
+        <InteractiveChatControls
+          currentOptionsCount={getCurrentOptionsCount()}
+          participantName={participantName}
+          waitingForAnswer={waitingForAnswer}
+          onQuestionAnswered={onQuestionAnswered}
+        />
       </Box>
       
     </Box>

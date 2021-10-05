@@ -8,7 +8,21 @@ import visuallyHidden from '@mui/utils/visuallyHidden';
 
 import styles from './InteractiveChatTextInput.styles';
 
-const InteractiveChatTextInput = ({ value, onChange }) => {
+const InteractiveChatTextInput = ({ value, onChange, currentOptionsCount, participantName, waitingForAnswer }) => {
+
+  const getLabel = () => {
+    let label = '';
+
+    if (participantName) {
+      label += 'Numeric answer'; 
+      label += currentOptionsCount ? (' (1 - ' + currentOptionsCount + ')') : '';
+    } else {
+      label = 'Your Name';
+    }
+
+    return label;
+  }
+
   return (
     <Grid
       className="interactive-chat-text-input"
@@ -23,12 +37,17 @@ const InteractiveChatTextInput = ({ value, onChange }) => {
         <TextField
           id="interactive-chat-text-input--input"
           className="interactive-chat-text-input--input"
-          label="Your Name"
+          type={participantName ? 'tel' : 'text'}
+          label={getLabel()}
           value={value}
           onChange={onChange}
           variant="outlined"
           margin="none"
           fullWidth={true}
+          inputProps={{
+            readOnly: !waitingForAnswer,
+            maxLength: participantName ? 2 : 64
+          }}
         />
       </Grid>
       <Grid
