@@ -44,15 +44,7 @@ const styles = {
     maxWidth: '90%',
     boxShadow: (theme) => theme.shadows[2],
     outlineOffset: '-2px',
-
-    // '&:after': {
-    //   content: '""',
-    //   display: 'block',
-    //   position: 'absolute',
-    //   bottom: '0px',
-    //   border: '10px solid transparent',
-    //   // boxShadow: (theme) => theme.shadows[2],
-    // },
+    wordBreak: 'break-all',
 
     '&[data-type="sent"]': {
       marginRight: '0px',
