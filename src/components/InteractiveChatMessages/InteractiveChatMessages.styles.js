@@ -24,7 +24,7 @@ const styles = {
     paddingBottom: (theme) => theme.spacing(0.5),
     paddingRight: (theme) => theme.spacing(1),
     width: '100%',
-    maxWidth: '600px',
+    maxWidth: (theme) => theme.contentMaxWidthPx + 'px',
 
     '&[data-type="sent"] + &[data-type="received"]': {
       paddingTop: (theme) => theme.spacing(2)
@@ -35,7 +35,7 @@ const styles = {
     },
   },
   'interactive-chat-messages--message': {
-    display: 'block',
+    display: 'table',
     position: 'relative',
     marginRight: 'auto',
     marginLeft: 'auto',

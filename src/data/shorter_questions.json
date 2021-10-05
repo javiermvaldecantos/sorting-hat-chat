@@ -1,0 +1,153 @@
+
+[
+  {
+      "title": "Which of the following would you most like to study?",
+      "answers": [
+          {
+              "title": "Centaurs",
+              "scores": {
+                  "g": 100,
+                  "r": 100,
+                  "h": 0,
+                  "s": 0
+              }
+          },
+          {
+              "title": "Goblins",
+              "scores": {
+                  "g": 0,
+                  "r": 100,
+                  "h": 0,
+                  "s": 50
+              }
+          },
+          {
+              "title": "Merpeople",
+              "scores": {
+                  "g": 0,
+                  "r": 0,
+                  "h": 100,
+                  "s": 100
+              }
+          },
+          {
+              "title": "Ghosts",
+              "scores": {
+                  "g": 100,
+                  "r": 100,
+                  "h": 0,
+                  "s": 0
+              }
+          },
+          {
+              "title": "Vampires",
+              "scores": {
+                  "g": 0,
+                  "r": 0,
+                  "h": 0,
+                  "s": 100
+              }
+          },
+          {
+              "title": "Werewolves",
+              "scores": {
+                  "g": 100,
+                  "r": 0,
+                  "h": 100,
+                  "s": 0
+              }
+          },
+          {
+              "title": "Trolls",
+              "scores": {
+                  "g": 0,
+                  "r": 0,
+                  "h": 100,
+                  "s": 100
+              }
+          }
+      ]
+  },
+  {
+      "title": "One of your house mates has cheated in a Hogwarts exam by using a Self-Spelling Quill. Now he has come top of the class in Charms, beating you into second place. Professor Flitwick is suspicious of what happened.  He draws you to one side after his lesson and asks you whether or not your classmate used a forbidden quill.  What do you do?",
+      "answers": [
+          {
+              "title": "Lie and say you don't know (but hope that somebody else tells Professor Flitwick the truth).",
+              "scores": {
+                  "g": 0,
+                  "r": 0,
+                  "h": 100,
+                  "s": 0
+              }
+          },
+          {
+              "title": "Tell Professor Flitwick that he ought to ask your classmate (and resolve to tell your classmate that if he doesn't tell the truth, you will).",
+              "scores": {
+                  "g": 100,
+                  "r": 0,
+                  "h": 0,
+                  "s": 0
+              }
+          },
+          {
+              "title": "Tell Professor Flitwick the truth.  If your classmate is prepared to win by cheating, he deserves to be found out.  Also, as you are both in the same house, any points he loses will be regained by you, for coming first in his place.",
+              "scores": {
+                  "g": 0,
+                  "r": 100,
+                  "h": 0,
+                  "s": 0
+              }
+          },
+          {
+              "title": "You would not wait to be asked to tell Professor Flitwick the truth.  If you knew that somebody was using a forbidden quill, you would tell the teacher before the exam started.",
+              "scores": {
+                  "g": 0,
+                  "r": 0,
+                  "h": 0,
+                  "s": 100
+              }
+          }
+      ]
+  },
+  {
+      "title": "A Muggle confronts you and says that they are sure you are a witch or wizard.  Do you:",
+      "answers": [
+          {
+              "title": "Ask what makes them think so?",
+              "scores": {
+                  "g": 0,
+                  "r": 100,
+                  "h": 0,
+                  "s": 0
+              }
+          },
+          {
+              "title": "Agree, and ask whether they'd like a free sample of a jinx?",
+              "scores": {
+                  "g": 0,
+                  "r": 0,
+                  "h": 0,
+                  "s": 100
+              }
+          },
+          {
+              "title": "Agree, and walk away, leaving them to wonder whether you are bluffing?",
+              "scores": {
+                  "g": 100,
+                  "r": 0,
+                  "h": 0,
+                  "s": 0
+              }
+          },
+          {
+              "title": "Tell them that you are worried about their mental health, and offer to call a doctor.",
+              "scores": {
+                  "g": 0,
+                  "r": 0,
+                  "h": 100,
+                  "s": 0
+              }
+          }
+      ]
+  }
+]

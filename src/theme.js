@@ -1,4 +1,6 @@
 const theme = {
+  contentMaxWidthPx: 600,
+
   palette: {
     // 'light' or 'dark' for light/dark mode
     type: 'light',

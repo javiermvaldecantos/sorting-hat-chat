@@ -5,6 +5,14 @@ const styles = {
       xs: theme.spacing(2),
       sm: theme.spacing(4),
     })
+  },
+
+  'interactive-chat-controls--inner': {
+    display: 'block',
+    margin: 'auto',
+    paddingLeft: (theme) => theme.spacing(1),
+    paddingRight: (theme) => theme.spacing(1),
+    maxWidth: (theme) => theme.contentMaxWidthPx + 'px'
   }
 };
 

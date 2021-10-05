@@ -20,17 +20,17 @@ const InteractiveChatMessages = ({ messages }) => {
             <Box
               className="interactive-chat-messages--message-wrapper"
               sx={styles['interactive-chat-messages--message-wrapper']}
-              data-type={message.type}
+              data-type={message.fromParticipant ? 'sent' : 'received'}
             >
               <Grow
                 in={true}
-                style={{ transformOrigin: 'top ' + (message.type === 'sent' ? 'right' : 'left') }}
+                style={{ transformOrigin: 'top ' + (message.fromParticipant ? 'right' : 'left') }}
                 timeout={750}
               >
                 <Typography
                   className="interactive-chat-messages--message"
                   sx={styles['interactive-chat-messages--message']}
-                  data-type={message.type}
+                  data-type={message.fromParticipant ? 'sent' : 'received'}
                   variant="body1"
                 >
                   {message.text}
