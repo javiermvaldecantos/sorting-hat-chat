@@ -4,7 +4,7 @@ const styles = {
     flexDirection: 'column-reverse',
     height: '100%',
     maxHeight: '100%',
-    overflowY: 'auto',
+    overflowY: 'scroll',
     paddingTop: (theme) => theme.spacing(4),
     paddingLeft: (theme) => ({
       xs: theme.spacing(2),

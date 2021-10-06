@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 
 import InteractiveChatTextInput from '../InteractiveChatTextInput';
-// import InteractiveChatOptionSelector from '../InteractiveChatOptionSelector';
 
 import styles from './interactiveChatControls.styles';
 
@@ -14,15 +13,16 @@ const InteractiveChatControls = ({ currentOptionsCount, participantName, waiting
     const value = event.target.value;
 
     if (value && participantName && currentOptionsCount) {
-      // At this point of the quiz the user can only answer using numbers
+      // At this point of the quiz the user can only answer using numbers, from 1 to currentOptionsCount
       const inputRegex = (currentOptionsCount > 9) ? /^\d{1,2}$/ : /^\d$/;
       if (inputRegex.test(value)) {
         const numericValue = parseInt(value);
-        if (numericValue <= currentOptionsCount) {
+        if ((numericValue > 0) && (numericValue <= currentOptionsCount)) {
           setTextInputValue(value);
         }
       }
     } else {
+      // The user is going to type their name, so we allow any value
       setTextInputValue(value);
     }
   }

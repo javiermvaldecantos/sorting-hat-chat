@@ -54,7 +54,7 @@ const InteractiveChat = () => {
 
   const displayIntroductoryMessages = () => {
     const introductoryMessages = [
-      { text: 'Hi there! This is the Sorting hat' },
+      { text: 'Hi there! This is the Sorting Hat' },
       { text: 'By answering my questions, you\'ll find out the Hogwarts house you belong to' },
       { text: 'But first, let me know your name', waitForAnswer: true },
     ];
