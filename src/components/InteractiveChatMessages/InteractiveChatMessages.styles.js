@@ -43,18 +43,17 @@ const styles = {
     borderRadius: '10px',
     maxWidth: '90%',
     boxShadow: (theme) => theme.shadows[2],
-    outlineOffset: '-2px',
-    wordBreak: 'break-all',
+    wordBreak: 'break-word',
 
     '&[data-type="sent"]': {
       marginRight: '0px',
       borderBottomRightRadius: '0px',
-      outline: (theme) => '2px solid ' + theme.palette.primary.main,
+      border: (theme) => '2px solid ' + theme.palette.primary.main
     },
     '&[data-type="received"]': {
       marginLeft: '0px',
       borderBottomLeftRadius: '0px',
-      outline: (theme) => '2px solid ' + theme.palette.secondary.main,
+      border: (theme) => '2px solid ' + theme.palette.secondary.main
     }
   }
 };
