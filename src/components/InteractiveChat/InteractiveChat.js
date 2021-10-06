@@ -160,11 +160,16 @@ const InteractiveChat = () => {
     } else {
       processParticipantAnswer(answer);
     }
+
     addMessage({
       text: answer,
       fromParticipant: true
     });
-    setWaitingForAnswer(false);
+
+    setTimeout(() => {
+      // Adding a delay, so the next question takes a bit of time to be displayed
+      setWaitingForAnswer(false);
+    }, 1000);
   }
 
   const addMessage = (message) => {

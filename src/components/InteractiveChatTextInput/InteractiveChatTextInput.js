@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
@@ -10,10 +10,18 @@ import styles from './InteractiveChatTextInput.styles';
 
 const InteractiveChatTextInput = ({ value, onChange, currentOptionsCount, participantName, waitingForAnswer }) => {
 
+  const [numericFormat, setNumericFormat] = useState(false);
+
+  useEffect(() => {
+    if (participantName && !waitingForAnswer) {
+      setNumericFormat(true);
+    }
+  }, [participantName, waitingForAnswer]);
+
   const getLabel = () => {
     let label = '';
 
-    if (participantName) {
+    if (numericFormat) {
       label += 'Numeric answer'; 
       label += currentOptionsCount ? (' (1 - ' + currentOptionsCount + ')') : '';
     } else {
@@ -37,7 +45,7 @@ const InteractiveChatTextInput = ({ value, onChange, currentOptionsCount, partic
         <TextField
           id="interactive-chat-text-input--input"
           className="interactive-chat-text-input--input"
-          type={participantName ? 'tel' : 'text'}
+          type={numericFormat ? 'tel' : 'text'}
           label={getLabel()}
           value={value}
           onChange={onChange}
