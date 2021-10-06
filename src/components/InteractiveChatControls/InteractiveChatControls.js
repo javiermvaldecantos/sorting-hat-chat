@@ -9,6 +9,7 @@ import styles from './interactiveChatControls.styles';
 const InteractiveChatControls = ({ currentOptionsCount, participantName, waitingForAnswer, onQuestionAnswered }) => {
   const [textInputValue, setTextInputValue] = useState('');
 
+  // Process the text input value, and if it's invalid, ignore it. This way user errors are prevented.
   const onTextInputChange = (event) => {
     const value = event.target.value;
 

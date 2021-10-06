@@ -14,6 +14,7 @@ const InteractiveChatTextInput = ({ value, onChange, currentOptionsCount, partic
 
   useEffect(() => {
     if (participantName && !waitingForAnswer) {
+      // Answers must have numeric format after the participant enters their name
       setNumericFormat(true);
     }
   }, [participantName, waitingForAnswer]);

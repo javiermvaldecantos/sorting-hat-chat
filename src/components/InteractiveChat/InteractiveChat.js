@@ -15,19 +15,32 @@ import styles from './InteractiveChat.styles';
 
 const InteractiveChat = () => {
 
+  // Array of all messages displayed on the chat
   const [allMessages, setAllMessages] = useState([]);
+
+  // Buffer of messages that will be displayed to the participant, one by one
   const [messagesToParticipant, setMessagesToParticipant] = useState([]);
+
+  // Index of the question that is currently being asked to the participant
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+
+  // True if the Sorting Hat is waiting for the participant's answer, false otherwise
   const [waitingForAnswer, setWaitingForAnswer] = useState(false);
+
+  // Participant name
   const [participantName, setParticipantName] = useState('');
+
+  // Participant score
   const [participantScore, setParticipantScore] = useState({ g: 0, r: 0, h: 0, s: 0 });
   
   useEffect(() => {
+    // Display some introductory messages after the chat loads
     displayIntroductoryMessages();
   }, []);
 
   useEffect(() => {
     if (participantName) {
+      // Start the quiz after the participant enters their name
       startQuiz();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -35,13 +48,15 @@ const InteractiveChat = () => {
 
   useEffect(() => {
     if (currentQuestionIndex === questions.length) {
+      // Finish the quiz after all the questions have been asked
       finishQuiz();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentQuestionIndex]);
 
   useInterval(() => {
-    // Checking for new messages to display to the participant
+    // This interval checks for new messages to display to the participant
+    // This way, the messages are displayed one at a time (every second), so it is less overwhelming
     if (messagesToParticipant.length > 0 && !waitingForAnswer) {
       const nextMessage = messagesToParticipant[0];
       const newMessagesToParticipant = messagesToParticipant.filter((message, index) => {
@@ -52,6 +67,7 @@ const InteractiveChat = () => {
     }
   }, 1000);
 
+  // Displays some introductory messages and asks for the participant's name
   const displayIntroductoryMessages = () => {
     const introductoryMessages = [
       { text: 'Hi there! This is the Sorting Hat' },
@@ -61,6 +77,8 @@ const InteractiveChat = () => {
     setMessagesToParticipant(introductoryMessages);
   }
 
+  // Adds all the questions to be asked to a buffer (messagesToParticipant)
+  // These questions will be asked one by one, waiting for the participant's answer
   const startQuiz = () => {
     const newMessagesToParticipant = [];
 
@@ -92,15 +110,17 @@ const InteractiveChat = () => {
     setMessagesToParticipant(newMessagesToParticipant);
   };
 
+  // Calculates the final score and displays it to the user
   const finishQuiz = () => {
     let winningHouse = '';
     let winningScore = 0;
     let totalPoints = 0;
     for (let house in participantScore) {
+      totalPoints += participantScore[house];
+
       if (participantScore[house] > winningScore) {
         winningHouse = house;
         winningScore = participantScore[house];
-        totalPoints += participantScore[house];
       }
     }
 
@@ -116,6 +136,7 @@ const InteractiveChat = () => {
     setMessagesToParticipant(finishingMessages);
   }
 
+  // Adds points to each house so the score is calculated
   const processParticipantAnswer = (answer) => {
     const newScore = {
       g: participantScore.g,
@@ -139,6 +160,7 @@ const InteractiveChat = () => {
     }
   }
 
+  // Returns the number of options available to the participant for the current question
   const getCurrentOptionsCount = () => {
     const currentQuestion = questions[currentQuestionIndex];
 
@@ -149,6 +171,7 @@ const InteractiveChat = () => {
     }
   }
 
+  // Handler used after the participant answers a question
   const onQuestionAnswered = (answer) => {
     const trimmedAnswer = (typeof answer === 'string') ? answer.trim() : answer;
     if (trimmedAnswer === '') {
@@ -172,6 +195,7 @@ const InteractiveChat = () => {
     }, 1000);
   }
 
+  // Adds a message to the chat
   const addMessage = (message) => {
     const newMessages = [];
     for (let i = 0; i < allMessages.length; i++) {
