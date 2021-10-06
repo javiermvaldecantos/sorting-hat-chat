@@ -2,7 +2,8 @@ import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-import theme from '../../theme';
+import '../../styles/global-styles.css';
+import theme from '../../styles/theme';
 
 import AppHeader from '../AppHeader';
 import AppBody from '../AppBody';

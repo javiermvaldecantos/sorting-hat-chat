@@ -1,3 +1,10 @@
+/*
+ * Theme object for the whole app.
+ * The theme defines colors, spacings, breakpoints, and anything else that can be reused.
+ * 
+ * These theme variables are added to the default theme to form a bigger object.
+ * Check the default theme at https://mui.com/customization/default-theme/
+ */
 const theme = {
   contentMaxWidthPx: 600,
 

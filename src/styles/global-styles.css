@@ -1,0 +1,10 @@
+/*
+ * This file contains global styles applied to outer elements of the app.
+ *
+ * Don't include any styles related to specific components of the app.
+ */
+
+/* Makes it possible to achieve full-height correctly on mobile browsers */
+html, body, #root {
+  height: 100%;
+}
