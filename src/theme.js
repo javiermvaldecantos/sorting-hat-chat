@@ -2,14 +2,11 @@ const theme = {
   contentMaxWidthPx: 600,
 
   palette: {
-    // 'light' or 'dark' for light/dark mode
-    type: 'light',
-
     // Primary color. Only 'main' is mandatory, the rest is optional
     primary: {
-      light: '#42a5f5',
-      main: '#1976d2',
-      dark: '#1565c0',
+      light: '#484848',
+      main: '#212121',
+      dark: '#000000',
       contrastText: '#fff'
     },
 
