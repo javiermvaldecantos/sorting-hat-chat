@@ -10,11 +10,17 @@ To build or run the project, you need to have the following installed:
 - [Node.js and npm](https://nodejs.org/en/download/). Recommended version is the latest LTS version (14.18.0 as of October 2021).
 - [Yarn package manager](https://yarnpkg.com/getting-started/install).
 
-## Running the app on development mode
-Go to the project root directory, and run `yarn start`. Then open Open [http://localhost:3000](http://localhost:3000) to view it in the browser (a new tab should open automatically). During development mode, the app will update on the go as you make edits to the code.
+## Running the app in development mode
+Follow these steps:
+1. Go to the project root directory
+2. Run `yarn` to install all the necessary dependencies
+3. Run `yarn start` to run the app in development mode. Then open Open [http://localhost:3000](http://localhost:3000) to view it in the browser (a new tab should open automatically). During development mode, the app will update on the go as you make edits to the code.
 
 ## Building the app for production
-Go to the project root directory, and run `yarn build`. With this command, a production version of the app will be created, optimized for performance. The production code will be placed inside the `build` folder. If you want to deploy the app, see the [deployment section](https://facebook.github.io/create-react-app/docs/deployment) of Create React App for more information.
+Follow these steps:
+1. Go to the project root directory
+2. Run `yarn` to install all the necessary dependencies (in case you haven't done it already)
+3. Run `yarn build`. With this command, a production version of the app will be created, optimized for performance. The production code will be placed inside the `build` folder. If you want to deploy the app, see the [deployment section](https://facebook.github.io/create-react-app/docs/deployment) of Create React App for more information.
 
 ---
 
